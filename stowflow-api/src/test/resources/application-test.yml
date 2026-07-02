@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/stowflow_test
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+inventra:
+  seed-demo: false
+  legacy-schema-fixer: false
+  jwt:
+    secret: TestSecretKeyForIntegrationTestsMustBe256BitsMinimum!!
+
+app:
+  swagger:
+    enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

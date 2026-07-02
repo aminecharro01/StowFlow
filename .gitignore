@@ -1,0 +1,32 @@
+# --- Logs / diagnostics ---
+*.log
+debug.log
+hs_err_pid*.log
+replay_pid*.log
+
+# --- Secrets / env (Gemini, Docker) ---
+.env
+.env.docker
+
+# --- Maven (API Java) ---
+stowflow-api/target/
+stowflow-api/src/main/resources/application-local.yml
+
+# --- Next.js / Node (frontend) ---
+inventra-web/.next/
+inventra-web/node_modules/
+inventra-web/.env.local
+inventra-web/.env*.local
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- IDE (optionnel) ---
+.idea/
+*.iml
+
+# --- Internal markdown (README only in repo) ---
+*.md
+!README.md

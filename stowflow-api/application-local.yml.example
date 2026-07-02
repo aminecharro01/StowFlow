@@ -1,0 +1,11 @@
+# Exemple de configuration locale pour stowflow-api (copier vers application-local.yml).
+# Ce fichier est gitignoré — ne pas committer vos secrets.
+
+inventra:
+  jwt:
+    secret: changez-moi-en-production-minimum-32-caracteres!!
+  gemini:
+    enabled: true
+    generate-replies: true
+    api-key: VOTRE_CLE_GEMINI
+    model: gemini-2.5-flash

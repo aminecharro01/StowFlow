@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+inventra:
+  seed-demo: false
+  legacy-schema-fixer: false
+
+app:
+  swagger:
+    enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

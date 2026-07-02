@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f3f4f6;
+  --foreground: #111827;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: #2563eb;
+  --color-sidebar: #1e3a8a;
+  --color-accent: #14b8a6;
+  --color-surface: #ffffff;
+  --color-muted: #6b7280;
+  --radius-card: 0.75rem;
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Sidebar — barre de défilement stylée */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(147, 197, 253, 0.55) rgba(255, 255, 255, 0.06);
+  scroll-behavior: smooth;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  margin: 4px 0;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(147, 197, 253, 0.75) 0%,
+    rgba(20, 184, 166, 0.65) 100%
+  );
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.35);
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(191, 219, 254, 0.95) 0%,
+    rgba(45, 212, 191, 0.85) 100%
+  );
+  box-shadow: 0 0 10px rgba(20, 184, 166, 0.45);
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:active {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* Modales — overlay et animation */
+.modal-backdrop {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+  animation: modal-fade-in 0.2s ease-out;
+}
+
+.modal-panel {
+  animation: modal-slide-in 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.confirm-panel {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow:
+    0 25px 50px -12px rgba(15, 23, 42, 0.35),
+    0 0 0 1px rgba(15, 23, 42, 0.06);
+}
+
+.confirm-footer {
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+.confirm-btn-ghost:hover {
+  background: #f3f4f6 !important;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Marketing — landing & auth animations */
+@keyframes orb-drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 30px) scale(1.08); }
+}
+
+@keyframes orb-drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-35px, 45px) scale(1.05); }
+}
+
+@keyframes orb-drift-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(25px, -30px) scale(1.1); }
+}
+
+@keyframes float-panel {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes bar-grow {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+@keyframes login-slide-in {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes gradient-text {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-orb-1 { animation: orb-drift-1 14s ease-in-out infinite; }
+.animate-orb-2 { animation: orb-drift-2 18s ease-in-out infinite; }
+.animate-orb-3 { animation: orb-drift-3 16s ease-in-out infinite; }
+.animate-float-panel { animation: float-panel 5s ease-in-out infinite; }
+.animate-hero-in { animation: hero-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.animate-shake { animation: shake 0.45s ease-in-out; }
+.animate-login-in { animation: login-slide-in 0.65s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+.hero-delay-1 { animation-delay: 0.1s; }
+.hero-delay-2 { animation-delay: 0.22s; }
+.hero-delay-3 { animation-delay: 0.34s; }
+.hero-delay-4 { animation-delay: 0.46s; }
+.hero-delay-5 { animation-delay: 0.58s; }
+
+.text-gradient-brand {
+  background: linear-gradient(135deg, #5EEAD4 0%, #93C5FD 45%, #FFFFFF 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-text 6s ease infinite;
+}
+
+.bar-animate {
+  transform-origin: bottom;
+  animation: bar-grow 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.badge-shimmer {
+  background: linear-gradient(90deg, rgba(20,184,166,0.15) 0%, rgba(94,234,212,0.35) 50%, rgba(20,184,166,0.15) 100%);
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-orb-1,
+  .animate-orb-2,
+  .animate-orb-3,
+  .animate-float-panel,
+  .animate-hero-in,
+  .text-gradient-brand,
+  .bar-animate,
+  .badge-shimmer {
+    animation: none !important;
+  }
+}
