@@ -2,6 +2,12 @@
 
 **StowFlow** is a multi-tenant SaaS platform for inventory management: articles, stock movements, suppliers, purchase orders, replenishment, POS, alerts, and dashboards. The stack is **Spring Boot 3** (REST API) + **Next.js** (App Router) + **PostgreSQL**.
 
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-6DB33F?logo=springboot&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
+![Java](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=white)
+
 > **Naming:** *StowFlow* = product brand; *Inventra* = technical package name (`com.stowflow.inventra`, `inventra-web`).
 
 ---
