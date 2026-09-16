@@ -7,11 +7,11 @@ if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
 }
 
 if (-not (Test-Path ".env.docker")) {
-    Write-Host "Note: .env.docker absent — copiez .env.docker.example si vous utilisez Gemini." -ForegroundColor Yellow
+    Write-Host "Note: .env.docker absent - copiez .env.docker.example si vous utilisez Gemini." -ForegroundColor Yellow
 }
 
 Write-Host ""
-Write-Host "StowFlow Docker — 3 services:" -ForegroundColor Cyan
+Write-Host "StowFlow Docker - 3 services:" -ForegroundColor Cyan
 Write-Host "  [1] postgres       -> localhost:5433  (database: stowflow, internal:5432)"
 Write-Host "  [2] stowflow-api   -> localhost:8000  (Spring Boot REST API)"
 Write-Host "  [3] inventra-web   -> localhost:3000  (Next.js frontend)"
