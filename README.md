@@ -1,3 +1,5 @@
+![StowFlow preview](docs/mockup.jpg)
+
 # StowFlow
 
 **StowFlow** is a multi-tenant SaaS platform for inventory management: articles, stock movements, suppliers, purchase orders, replenishment, POS, alerts, and dashboards. The stack is **Spring Boot 3** (REST API) + **Next.js** (App Router) + **PostgreSQL**.
